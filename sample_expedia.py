@@ -40,26 +40,18 @@ cv_random_choice=[]
 with open("train.csv", "r") as source:
     source.readline()# skip header
     xx=source.readline()
-    #print xx
     print "started the while loop"
     while len(xx) !=0 :
-#print "started the while loop"
-        #xx=source.readline()
         xx_key=xx.split(',')[0]
         xx_full=xx.replace('\n','')
-       # print xx,xx_key, xx_full
-        if xx_key in all_srch_ids_used :
+        if xx_key in all_srch_ids_used : #note that this read uses only once - which is an optimal way to locate the srch_ids
             if xx_key in dict_sample['train']:
                 train_random_choice.append(xx_full)
-#        if xx_key in all_srch_ids_used :
             elif xx_key in dict_sample['test']:
               test_random_choice.append(xx_full)
- #       if xx_key in all_srch_ids_used :
             elif xx_key in dict_sample['cv']:
                 cv_random_choice.append(xx_full)
         xx=source.readline()
-        #print xx
-        #print "came here"
 print "2nd time read was success !"
 	
 # Now create the sample files from the input file again.
