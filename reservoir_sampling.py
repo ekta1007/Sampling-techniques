@@ -2,7 +2,7 @@
 # Reservoir_sampling function - code from Wiki
 
 import random
-def reservoir_sampling(file_handle,SAMPLE_COUNT)
+def reservoir_sampling(file_handle,SAMPLE_COUNT) :
         # To force the value of the seed so the results are repeatable
         #random.seed(12345)
  
