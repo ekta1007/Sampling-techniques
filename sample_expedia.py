@@ -1,6 +1,14 @@
+
+#Creating train, test and cross validation datasets in sklearn (python 2.7) with a grouping constraints
+#To understand what this module does, see also my post in stacloverflow - http://stackoverflow.com/questions/18864754/creating-train-test-and-cross-validation-datasets-in-sklearn-python-2-7-with
+#Solved what I was looking for with a custom module, though it would be helpful to others looking at similar use-case
+
+#PPS: The code was not written for very large data in mind, so it's not very efficient. Should you FORK this code - please point out how can I improve the run-time.
+
 #d all the srch_ids - optimized file
+
 import timeit
-start = timeit.timeit()
+start = timeit.timeit)
 import random , csv
 from itertools import chain
 with open("train.csv", "r") as source:
